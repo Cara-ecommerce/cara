@@ -1,0 +1,352 @@
+/* body{
+    margin: 0;
+    padding: 0;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(211, 200, 200);
+}
+
+.slider{
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.sli input{
+    display: none;
+}
+
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img{
+    width: 800px;
+    height: 500px;
+}
+
+.navigation-manual{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid rgb(0, 0, 0);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background: white;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
+
+#radio5:checked ~ .first{
+    margin-left: -80%;
+}
+
+.navigation-auto{
+   position: absolute; 
+   display: flex;
+   width: 800px;
+   justify-content: center;
+   margin-top: 479px;
+}
+
+.navigation-auto div{
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: black;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: black;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: black;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background: black;
+}
+
+#radio5:checked ~ .navigation-auto .auto-btn5{
+    background: black;
+}
+
+
+
+
+ */
+
+
+
+ body{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+ }
+
+ .slider1, .slider2, .slider3, .slider4{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+ }
+
+ img{
+    width: 120%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 70%;
+    animation: zoom-out 3s linear infinite;
+ }
+@keyframes zoom-out{
+   100%{
+    width: 100%;
+   } 
+}
+
+/* .slider1 .overlay{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+} */
+ .text-box{
+    width: 600px;
+    position: absolute;
+    top: 300px;
+    left: 100px;
+    color: rgb(0, 0, 0);
+    animation: textup 12s linear infinite;
+    transform: translateY(100px);
+ }
+
+.text-box h1{
+    margin-bottom: 20px;
+ 
+
+}
+
+.text-box p{
+    font-size: 15px;
+    line-height: 18px;
+    margin-top: 50px;
+}
+
+.text-box span{
+    background: rgb(75, 49, 49);
+    height: 3px;
+    width: 10%;
+    position: absolute;
+    left: 0;
+}
+
+.slider1{
+    animation: slide1 12s linear infinite;
+}
+.slider2{
+    animation: slide2 12s linear infinite;
+}
+.slider3{
+    animation: slide3 12s linear infinite;
+}
+.slider4{
+    animation: slide4 12s linear infinite;
+}
+
+@keyframes slide1{
+    0%{
+        visibility: visible;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible;
+    }
+}
+
+@keyframes slide2{
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: visible;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+
+@keyframes slide3{
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: visible;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+@keyframes slide4{
+    0%{
+        visibility: hidden;
+    }
+    25%{
+        visibility: hidden;
+    }
+    50%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible;
+    }
+}
+
+@keyframes textup{
+    10%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.text-box1{
+    animation-delay: 0s;
+}
+
+.text-box2{
+    animation-delay: 3s;
+}
+
+.text-box3{
+    animation-delay: 6s;
+}
+
+.text-box4{
+    animation-delay: 9s;
+} 
+
+
+
+/* 
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.banner{
+    width: 120%;
+    height: 100vh;
+    position: relative; 
+    overflow: hidden;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
